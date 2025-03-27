@@ -12,11 +12,10 @@ wait = 10
 Url = "https://automationplayground.com/crm/login.html"
 customer_email = "uti.dennis3@gmail.com"
 customer_Pass= "jemimah"
-first_name = "Topsy"
+first_name = "Tope"
 last_name = "Jones"
 Place = "London"
 State = "Virginia"
-
 
 
 #Login Details
@@ -32,7 +31,7 @@ time.sleep(wait)
 driver.find_element(By.ID, "new-customer").click()
 driver.find_element(By.ID, "EmailAddress").send_keys("uti.dennis3@gmail.com")
 first_name =driver.find_element(By.ID, "FirstName")
-first_name.send_keys("Topsy")
+first_name.send_keys("Tope")
 last_name =driver.find_element(By.ID, "LastName")
 last_name.send_keys("Jones")
 Place =driver.find_element(By.ID, "City")
