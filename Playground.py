@@ -43,7 +43,7 @@ driver.find_element("css selector", 'input[name="gender"]').click()
 driver.find_element(By.CLASS_NAME, "btn-primary").click()
 time.sleep(wait)
 
-
+driver.quit()
 
 
 
