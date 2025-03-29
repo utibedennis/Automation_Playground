@@ -10,35 +10,35 @@ driver.maximize_window()
 #Variable Declaration
 wait = 10
 Url = "https://automationplayground.com/crm/login.html"
-customer_email = "uti.dennis3@gmail.com"
-customer_Pass= "jemimah"
-first_name = "Tope"
-last_name = "Jones"
+Email = "uti.dennis3@gmail.com"
+Password= "jemimah"
+FirstName= "Tope"
+Lastname = "Jones"
 Place = "London"
-State = "Virginia"
+State1 = "Virginia"
 
 
 #Login Details
 driver.get(Url)
 customer_email  =driver.find_element(By.ID, "email-id")
-customer_email.send_keys("uti.dennis3@gmail.com")
+customer_email.send_keys(Email)
 customer_Pass  =driver.find_element(By.ID, "password")
-customer_Pass.send_keys("jemimah")
+customer_Pass.send_keys(Password)
 driver.find_element(By.ID, "submit-id").click()
 time.sleep(wait)
 
 #Creating New Customer
 driver.find_element(By.ID, "new-customer").click()
-driver.find_element(By.ID, "EmailAddress").send_keys("uti.dennis3@gmail.com")
-first_name =driver.find_element(By.ID, "FirstName")
-first_name.send_keys("Tope")
-last_name =driver.find_element(By.ID, "LastName")
-last_name.send_keys("Jones")
-Place =driver.find_element(By.ID, "City")
-Place.send_keys("London")
+driver.find_element(By.ID, "EmailAddress").send_keys(Email)
+name1 =driver.find_element(By.ID, "FirstName")
+name1.send_keys(FirstName)
+name2 =driver.find_element(By.ID, "LastName")
+name2.send_keys(Lastname)
+Place1 =driver.find_element(By.ID, "City")
+Place1.send_keys(Place)
 State =driver.find_element(By.ID, "StateOrRegion")
-State.send_keys("Virginia")
-driver.find_element("css selector", 'input[name="gender"]').click()
+State.send_keys(State1)
+driver.find_element(By.CSS_SELECTOR, '#loginform > div > div > div > div > form > div:nth-child(6) > input[type=radio]:nth-child(3)').click()
 driver.find_element(By.CLASS_NAME, "btn-primary").click()
 time.sleep(wait)
 
